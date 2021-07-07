@@ -4,8 +4,8 @@
 - Below are API used to test data from server side
 
 ## Technology used
--	Backend : Spring boot framework 
--	Frontend : angular 12
+-	Backend : Spring boot framework (master branch)
+-	Frontend : angular 12 (main branch)
 -	Database: Mysql 
 -	Docker server for building and running application
 - Integration testing using JUNIT
@@ -34,3 +34,4 @@
 - Link: http://localhost:8080/api/job/download/{fileName}
 
 #### That the main activities needed on the project and others are non functional requirement like authentication, authorization, user account creation, etc
+
