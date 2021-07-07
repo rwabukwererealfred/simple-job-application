@@ -1,0 +1,17 @@
+<form ngNativeValidate>
+<h2 mat-dialog-title>Confirmation Dialog</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="form-group">
+        <div class="alert alert-danger" role="alert" *ngIf="failed">
+            failed: {{ message }}
+        </div>
+    </div>
+       <textarea cols="6" rows="5" class="form-control" [(ngModel)]="comment" required =true name="comment"></textarea>
+       <span ng-show="!comment.length">Please enter something!</span>
+     
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="dropApplication()">Drop</button>
+    <button mat-button (click)="dialogRef.close('close')">Close</button>
+</mat-dialog-actions>
+</form>

@@ -1,0 +1,50 @@
+<div class="dashboard-main-wrapper">
+    <div class="dashboard-header">
+       <app-header></app-header>
+      </div>
+      
+      
+      <div class="dashboard-wrapper" style="width: 70%; padding-top: 20px;">
+        <div class="container-fluid">
+            <app-sidebar></app-sidebar>
+
+            <div class="main-content container-fluid">
+                <div class="email-inbox-header">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="email-title"><span class="icon"><i class="fas fa-inbox"></i></span> Job Position List <span class="new-messages">(5 new Position)</span> </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="email-search">
+                                <div class="input-group input-search">
+                                    <input class="form-control" type="text" placeholder="Search job..." [(ngModel)]="filterTerm" name="filterTerm"><span class="input-group-btn">
+                                   <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="email-list">
+                    
+                    
+                    <div class="email-list-item" *ngFor="let job of jobs | filter:filterTerm">
+                        <div class="email-list-actions">
+                          <img src="../../../assets/images/logos.png" width="50" height="60"/>
+                        </div> &nbsp;&nbsp;
+                        <a [routerLink]="['/jobDetails', job.id]">
+                        <div class="email-list-detail">
+                            <span class="from" style="font-weight: bold; color: black;"> {{job.jobTilte}}</span>
+                            <p class="msg">Published: {{job.publishedDate | date: "dd-MMM-yyyy "}} | Deadline: {{job.deadline | date: "dd-MMM-yyyy"}}</p>
+                            <p class="msg">{{job.experience}} | <strong>{{job.status}}</strong> </p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+      </div>
+      
+   </div>
+   

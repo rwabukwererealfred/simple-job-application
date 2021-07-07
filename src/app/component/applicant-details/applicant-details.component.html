@@ -1,0 +1,104 @@
+<form>
+<div class="dashboard-main-wrapper">
+        <div class="dashboard-header">
+            <app-header></app-header>
+        </div>
+    
+    
+        <div class="dashboard-wrapper" style="width: 70%;">
+            <div class="container-fluid">
+                <app-sidebar></app-sidebar>
+    
+                <div class="main-content container-fluid">
+                    <div class="email-inbox-header">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="email-title"><span class="icon"><i class="fas fa-inbox"></i></span> Applicant Profile <span class="new-messages"></span> </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                   
+                    <div >
+                        <div class="card">
+                            <h5 class="card-header">Applicant info</h5>
+                            <div class="card-body">
+                                <form action="#" id="basicform" data-parsley-validate="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <label>First Name</label>
+                                                        <input placeholder="{{jobApplication?.user.firstName}}" class="form-control"
+                                                            disabled  name="firstName">
+                                                    </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <label >Last Name</label>
+                                                        <input  type="password"  class="form-control" disabled
+                                                        placeholder="{{jobApplication?.user.lastName}}" name="lastName">
+                                                    </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <label>Email Address</label>
+                                                        <input  class="form-control" disabled class="form-control"
+                                                         placeholder="{{jobApplication?.user.email}}">
+                                                    </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <label >Phone Number</label>
+                                                        <input  type="text" class="form-control" disabled
+                                                         placeholder="{{jobApplication?.user.phoneNumber}}">
+                                                    </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <label >Position</label>
+                                                        <input  type="text" placeholder="{{jobApplication?.jobTitle}}"  
+                                                            class="form-control" disabled name="jobTitle">
+                                                    </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                    <label >Job Status</label>
+                                                    <input  type="text" placeholder="{{jobApplication?.status}}"  
+                                                        class="form-control" disabled name="jobTitle">
+                                                </div>
+                                    </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <label >CV</label>
+                                                       
+                                                            <button  
+                                                            (click)="downloadCv()" class="form-control">
+
+                                                                <i class="fa fa-download"></i>
+                                                               <span> Read CV</span> 
+                                                </button>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="text-right">
+                                                <button  class="btn btn-space btn-primary"
+                                                    (click)="openApproveDiaolog(jobApplication)">Pass</button>
+                                                    <button  class="btn btn-space btn-danger" (click)="openDropDiaolog(jobApplication)"
+                                                    >Drop</button>
+    
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</form>

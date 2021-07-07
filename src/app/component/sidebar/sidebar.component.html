@@ -1,0 +1,21 @@
+<aside class="page-aside sidebar-dark nav-left-sidebar" style="height: 40%; margin-top: 85px;">
+    <div class="aside-content navbar-light">
+        <div class="aside-header" style="background-color: cornflowerblue">
+            <button class="navbar-toggle" data-target=".aside-nav" data-toggle="collapse"
+             type="button"><span class="icon"><i class="fas fa-caret-down"></i></span></button><span class="title">Menu</span>
+           
+        </div>
+       
+        
+        <div class="aside-nav collapse">
+            <ul class="nav">
+                <li class="active" *ngIf="roles == 'HR'"><a href="/applicants" routerLink="/applicants"><span class="icon"><i class="fas fa-fw fa-inbox"></i></span>Applicants<span class="badge badge-primary float-right">8</span></a></li>
+                <li><a href="/jobListed" routerLink="/jobListed"><span class="icon"><i class="fas fa-fw  fa-envelope"></i></span>Available Jobs</a></li>
+                <li><a  *ngIf = "roles =='Applicant'" href="#"><span class="icon"><i class="fas fa-fw fa-briefcase"></i></span>My Application<span class="badge badge-secondary float-right">4</span></a></li>
+                <li><a  *ngIf = "roles =='Applicant'" href="#"><span class="icon"><i class="fas fa-fw fa-file"></i></span>Profile</a></li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</aside>
