@@ -33,4 +33,4 @@
 - Required: file Name
 - Link: http://localhost:8080/api/job/download/{fileName}
 
-#### That the main activities needed on the project and others are non functional requirement like authentication, authorization or user account creation, etc
+#### That the main activities needed on the project and others are non functional requirement like authentication, authorization, user account creation, etc
